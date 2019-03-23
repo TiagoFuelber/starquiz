@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -44,6 +45,7 @@ module.exports = {
       filename: 'index.html', // target html
       template: './src/index.html' // source html
     }),
-    new ExtractTextPlugin({ filename: 'css/style.css' })
+    new ExtractTextPlugin({ filename: 'css/style.css' }),
+    new CleanWebpackPlugin()
   ]
 };
