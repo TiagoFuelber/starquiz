@@ -10,6 +10,7 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'index_bundle.js'
   },
+  resolve: { extensions: ['.js', '.jsx'] },
   module: {
     rules: [
       {
