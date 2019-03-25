@@ -8,6 +8,7 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -17,6 +18,11 @@
   },
   "plugins": ["react"],
   "rules": {
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", "never"],
+    "implicit-arrow-linebreak": ["error", "below"]
+  },
+  "ecmaFeatures": {
+    "classes": true,
+    "jsx": true
   }
 }

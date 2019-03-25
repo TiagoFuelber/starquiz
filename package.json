@@ -4,7 +4,9 @@
   "description": "A quiz game on Star Wars Characters",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require @babel/register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require @babel/register --watch",
+    "test:coverage": "nyc npm test",
     "start": "node_modules/.bin/webpack-dev-server --open --config webpack.dev.js --hot",
     "build": "node_modules/.bin/webpack --config webpack.prod.js --mode production"
   },
@@ -21,9 +23,13 @@
   "dependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "styled-components": "^4.2.0",
-    "styled-normalize": "^8.0.6"
+    "styled-normalize": "^8.0.6",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -32,7 +38,9 @@
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
+    "chai": "^4.2.0",
     "clean-webpack-plugin": "^2.0.1",
     "eslint": "^5.15.3",
     "eslint-config-airbnb": "^17.1.0",
@@ -44,6 +52,7 @@
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.11.1",
     "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1",

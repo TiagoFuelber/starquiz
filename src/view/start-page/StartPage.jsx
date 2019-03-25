@@ -1,7 +1,7 @@
 import React from 'react';
-import Container from '../../components/container.component';
-import StyledBasePage from '../../styles/base-page.style';
-import LinkButton from '../../components/link-button.component';
+import StyledBasePage from '../ui/styles/StyledBasePage';
+import Container from '../ui/Container';
+import LinkButton from '../ui/buttons/LinkButton';
 
 const StartPage = () => (
   <StyledBasePage>
@@ -33,7 +33,7 @@ const StartPage = () => (
       </p>
       <h2>Are you ready?</h2>
       <p>So may the force be with you!!</p>
-      <LinkButton to="/game" width="100%" className="upper">
+      <LinkButton to="/quiz" width="100%" className="upper">
         Play!!
       </LinkButton>
     </Container>
