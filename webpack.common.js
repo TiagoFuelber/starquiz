@@ -2,10 +2,11 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+require('babel-polyfill');
 
 module.exports = {
-  devtool: 'source-map',
-  entry: './src/index.jsx',
+  devtool: true,
+  entry: ['babel-polyfill', './src/index.jsx'],
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'index_bundle.js',

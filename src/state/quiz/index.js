@@ -9,7 +9,7 @@ export const quizReducer = (state = initialState, action) => {
       return { ...state, answers: [...initialState.answers, action.answer] };
 
     default:
-      return initialState;
+      return state;
   }
 };
 

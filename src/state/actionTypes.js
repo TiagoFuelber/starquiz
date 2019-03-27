@@ -2,4 +2,8 @@ export const QUIZ = {
   ADD_ANSWER: 'ADD_ANSWER'
 };
 
-export default { QUIZ };
+export const PEOPLE = {
+  UPDATE: 'UPDATE'
+};
+
+export default { QUIZ, PEOPLE };
