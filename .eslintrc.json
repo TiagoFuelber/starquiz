@@ -29,8 +29,7 @@
     "implicit-arrow-linebreak": [
       "error",
       "below"
-    ],
-    "prettier/prettier": "error"
+    ]
   },
   "ecmaFeatures": {
     "classes": true,
