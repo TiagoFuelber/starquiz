@@ -10,11 +10,22 @@ export const updatePeople = data =>
 export const getPaginatedPeople = page =>
   (dispatch, getState, container) => {
     container.getPaginatedPeople(page, {
-      onSuccess: (data) => {
+      onSuccess: async (data) => {
         const mappedPeople = data.results.map(person =>
           Person.create(person));
 
-        dispatch(updatePeople({ ...data, results: mappedPeople }));
+        const getImages = async () =>
+          Promise.all(
+            mappedPeople.map(
+              async person =>
+                ({ ...person, image: await container.getPersonImage(person.name) })
+            )
+          );
+
+        const mappedPeopleWithImages = await getImages();
+        console.log(mappedPeopleWithImages);
+
+        dispatch(updatePeople({ ...data, results: mappedPeopleWithImages }));
       }
     });
   };

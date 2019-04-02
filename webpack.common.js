@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -49,6 +50,10 @@ module.exports = {
       template: './src/index.html' // source html
     }),
     new ExtractTextPlugin({ filename: 'css/style.css' }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+      GOOGLE_API_KEY: JSON.stringify('AIzaSyAT7AHPdePDR89WJfwJ8jdcgJ2Igor8LiU'),
+      GOOGLE_CX: JSON.stringify('Google')
+    })
   ]
 };

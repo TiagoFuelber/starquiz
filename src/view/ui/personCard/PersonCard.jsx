@@ -6,6 +6,7 @@ const PersonCard = ({ person }) =>
   (
     <StyledPersonCard>
       <div className="buttons">
+        <img src={person.image} alt={person.name} />
         <Button small>?</Button>
         <Button small>...</Button>
       </div>

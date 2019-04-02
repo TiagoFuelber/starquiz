@@ -1,6 +1,9 @@
 import PeopleRepository from './infra/PeopleRepository';
 import makeGetPaginatedPeople from './application/getPaginatedPeople';
+import makeGetPersonImage from './application/getPersonImage';
 
 const getPaginatedPeople = makeGetPaginatedPeople({ PeopleRepository });
 
-export { getPaginatedPeople };
+const getPersonImage = makeGetPersonImage({ PeopleRepository });
+
+export { getPaginatedPeople, getPersonImage };

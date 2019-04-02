@@ -9,7 +9,7 @@ import Button from '../ui/buttons/Button';
 import PersonCard from '../ui/personCard/PersonCard';
 import StyledCardsContainer from './StyledCardsContainer';
 
-class GamePage extends Component {
+class QuizPage extends Component {
   static endGame() {
     console.log('End of time!');
   }
@@ -28,7 +28,7 @@ class GamePage extends Component {
         <Container>
           <div className="header">
             <h1 className="center upper">Game page</h1>
-            <Timer timeInSeconds={120} onEndTimer={GamePage.endGame} />
+            <Timer timeInSeconds={120} onEndTimer={QuizPage.endGame} />
           </div>
           <StyledCardsContainer>
             {people.list.map(person =>
@@ -74,4 +74,4 @@ const mapDispatchToProps = dispatch =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(GamePage);
+)(QuizPage);

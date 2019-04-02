@@ -8,7 +8,9 @@
   ],
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "GOOGLE_API_KEY": "readonly",
+    "GOOGLE_CX": "readonly"
   },
   "parser": "babel-eslint",
   "parserOptions": {

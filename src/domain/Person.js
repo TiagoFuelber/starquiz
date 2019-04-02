@@ -8,7 +8,13 @@ export const create = (person) => {
     eye_color: eyeColor,
     birth_year: birthYear,
     gender,
-    homeworld, films, species, vehicles, starships, created
+    homeworld,
+    films,
+    species,
+    vehicles,
+    starships,
+    created,
+    image
   } = person;
 
   return ({
@@ -25,7 +31,8 @@ export const create = (person) => {
     species,
     vehicles,
     starships,
-    created
+    created,
+    image
   });
 };
 
